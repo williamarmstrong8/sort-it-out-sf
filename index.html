@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort It Out - Luxury Organizing Services in San Francisco</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Sort It Out</a>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="reveal-text">Transform Your Space,<br>Elevate Your Life</h1>
+            <p class="subtitle">Professional organizing services that blend elegance with functionality across every stage of life.</p>
+            <a href="#contact" class="cta-button">Schedule Consultation</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-slider">
+            <div class="slider-container">
+                <!-- Service slides will be added dynamically via JavaScript -->
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide" aria-label="Previous service">←</button>
+                <div class="slide-indicators"></div>
+                <button class="next-slide" aria-label="Next service">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three 'S' System Section -->
+    <section id="system" class="system-section">
+        <div class="system-content">
+            <h2>Our Three 'S' System</h2>
+            <div class="system-steps">
+                <div class="system-step">
+                    <div class="system-step-circle">1</div>
+                    <div class="system-step-label">Sort</div>
+                    <div class="system-step-desc">Everything is gathered, cleaned, and sorted into simple, clear categories.</div>
+                </div>
+                <div class="system-step-connector"></div>
+                <div class="system-step">
+                    <div class="system-step-circle">2</div>
+                    <div class="system-step-label">Select</div>
+                    <div class="system-step-desc">Thoughtfully choose what stays, with the moral support to let go of what no longer serves you.</div>
+                </div>
+                <div class="system-step-connector"></div>
+                <div class="system-step">
+                    <div class="system-step-circle">3</div>
+                    <div class="system-step-label">Store</div>
+                    <div class="system-step-desc">Items are returned and stored in a practical, contained, and visually pleasing way to suit your space.</div>
+                </div>
+            </div>
+            <blockquote>Sort it Out's simple and effective three-step approach helps conquer the chaos to transform your space.</blockquote>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <div class="image-frame">
+                    <!-- Professional headshot will be added via CSS -->
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Meet Emma</h2>
+                <p class="lead">Founder & Lead Organizer</p>
+                <div class="bio">
+                    <p>At Sort it Out, we know organizing can be tough. From pantries to playrooms, we bring our tried and tested 3-step approach, along with the moral support needed to help you conquer the chaos.</p>
+                    <p>We understand that every home or workspace has its own unique set of challenges, and we're here to help guide you through it.</p>
+                </div>
+                <blockquote>
+                    "Organization is not about perfection—it's about creating space for what matters most."
+                </blockquote>
+                <button class="work-with-emma" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Work with Emma</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Begin Your Transformation</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <h3>Submit Information</h3>
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" required placeholder=" ">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                    Thank you for your message! We'll get back to you soon.
+                </div>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p class="contact-name">Emma Brown</p>
+                <p>Owner | Sort It Out</p>
+                <p>415-596-3938</p>
+                <p>Email: <a href="mailto:sortitoutsf@gmail.com">sortitoutsf@gmail.com</a></p>
+                <div class="consultation-note">
+                    <h3>Your Organized Space Awaits</h3>
+                    <p>Take the first step toward a more organized life with a free, no-obligation consultation. Let's chat about your space and create a personalized plan that works for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        })();
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const submitBtn = form.querySelector('.submit-btn');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Get form data
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                message: form.message.value,
+                to_email: 'sortitoutsf@gmail.com'
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(function() {
+                    // Show success message
+                    form.style.display = 'none';
+                    confirmationMessage.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                })
+                .catch(function(error) {
+                    // Show error message
+                    alert('Sorry, there was an error sending your message. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                });
+            
+            return false;
+        }
+    </script>
+</body>
+</html> 
