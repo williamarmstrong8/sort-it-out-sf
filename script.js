@@ -318,28 +318,30 @@ contactForm.addEventListener('submit', (e) => {
     });
 
     if (isValid) {
-        // Show success message with premium animation
-        const successMessage = document.createElement('div');
-        successMessage.className = 'success-message';
-        successMessage.innerHTML = `
-            <svg class="checkmark" viewBox="0 0 52 52">
-                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-            </svg>
-            <p>Thank you for your message! We'll get back to you soon.</p>
-        `;
-        contactForm.appendChild(successMessage);
-
-        // Reset form
-        contactForm.reset();
-        
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-            successMessage.style.opacity = '0';
-            setTimeout(() => {
-                successMessage.remove();
-            }, 500);
-        }, 5000);
+        emailjs.sendForm('service_mt3134t', 'template_90uepay', contactForm)
+            .then(() => {
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.innerHTML = `
+                    <svg class="checkmark" viewBox="0 0 52 52">
+                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                    <p>Thank you for your message! We'll get back to you soon.</p>
+                `;
+                contactForm.appendChild(successMessage);
+                contactForm.reset();
+                setTimeout(() => {
+                    successMessage.style.opacity = '0';
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 500);
+                }, 5000);
+            })
+            .catch((error) => {
+                console.error('EmailJS error:', error);
+                alert('Something went wrong. Please try again later.');
+            });
     }
 });
 
