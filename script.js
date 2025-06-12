@@ -35,9 +35,11 @@ window.addEventListener('scroll', () => {
         } else {
             navbar.style.transform = 'translateY(0)';
         }
+        document.querySelector('.logo img').src = 'assets/logo-black.png';
     } else {
         navbar.classList.remove('scrolled');
         navbar.style.transform = 'translateY(0)';
+        document.querySelector('.logo img').src = 'assets/logo-white.png';
     }
     
     lastScroll = currentScroll;
@@ -46,44 +48,44 @@ window.addEventListener('scroll', () => {
 // Services Slider
 const services = [
     {
-        title: "Closet Sort & Store",
-        description: "This is a service that declutters and organizes any closet—creating practical systems that make daily essentials easy to reach while keeping sentimental items neatly and respectfully stored.",
-        beforeImage: "assets/closets-after.png",
-        afterImage: "assets/closets-before.png"
-    },
-    {
-        title: "Tidy Pantries to Sorted Fridges",
-        description: "Transform messy pantries and fridges into organized, efficient spaces—improving visibility, reducing waste, and making food storage effortless.",
-        beforeImage: "assets/fridge-after.png",
-        afterImage: "assets/fridge-before.png"
-    },
-    {
         title: "Growing Spaces, Sorted",
-        description: "Sort It Out redesigns and reorganizes kids' spaces to grow with them—blending function, personality, and age-appropriate solutions from nursery to teen.",
+        description: "As kids grow, so do their needs. Whether transitioning from a nursery to a toddler's room, upgrading for a grade schooler, or adapting a space for a tween or teen, we help redesign and reorganize their environment to reflect evolving personalities, interests, and routines. From creating age-appropriate storage to refreshing layouts, Sort it Out brings function and personality together in spaces that grow with your child.",
         beforeImage: "assets/kids-after.png",
         afterImage: "assets/kids-before.png"
     },
     {
         title: "Sorted & School Ready",
-        description: "Preps bedrooms, study zones, and dorms for a smooth, focused start to the school year.",
+        description: "Ease the shift from summer break to school days by giving your child's space a fresh start for the semester. Whether it's refreshing a bedroom that's become cluttered over the summer or setting up a distraction-free homework zone, Sort it Out can help create a calm, organized environment that supports learning, productivity, and daily routines. Dorm room prep is also available for college-bound students, helping your grad start their next chapter feeling settled, confident, and ready to thrive.",
         beforeImage: "assets/school-after.png",
         afterImage: "assets/school-before.png"
     },
     {
         title: "Senior Support & Sort",
-        description: "Helps older adults downsize and organize with care, making life transitions smoother and more supportive.",
+        description: "Supporting older adults through life changes requires both care and clarity. Whether downsizing, relocating to be closer to family, or transitioning to assisted living, Sort it Out offers respectful, compassionate help in sorting through years of belongings. We assist in identifying what to keep, donate, or pass on—helping preserve cherished memories while making the transition smoother and less stressful.",
         beforeImage: "assets/senior-after.png",
         afterImage: "assets/senior-before.png"
     },
     {
         title: "Seasonal Sort & Store",
-        description: "Takes care of packing away holiday décor—working with existing storage or providing practical, easy-to-use options that make unpacking next season a breeze.",
+        description: "Whether it's ornaments, garlands, or other festive touches around your home, your decorations will be carefully sorted, organized, and packed away using either existing containers or introducing new, efficient labeled storage to keep everything neat, protected, and ready for the next season.",
         beforeImage: "assets/seasonal-after.png",
         afterImage: "assets/seasonal-before.png"
     },
     {
+        title: "Tidy Pantries to Sorted Fridges",
+        description: "Struggling to put away the weekly shop? Tired of finding forgotten, wasted food? We'll help you transform your kitchen storage into a space that works for you and your family. By reorganizing pantry shelves and fridge storage, we create a kitchen that's fresh, functional, and effortlessly organized.",
+        beforeImage: "assets/fridge-after.png",
+        afterImage: "assets/fridge-before.png"
+    },
+    {
+        title: "Closet Sort & Store",
+        description: "Closets of all kinds tend to accumulate more than they should, from daily necessities to forgotten items and sentimental keepsakes. Whether you're organizing a chaotic hallway closet, updating a medicine cabinet, or sorting out an entire wardrobe, Sort it Out can help edit, sort, and provide solutions that are practical, aesthetically pleasing, and easy to maintain for all your closet needs, making everyday essentials easy to access whilst keeping treasured memories and keepsakes thoughtfully stored.",
+        beforeImage: "assets/closets-after.png",
+        afterImage: "assets/closets-before.png"
+    },
+    {
         title: "Move Smart, Sort First",
-        description: "Helps declutter and organize before packing—so you move only what matters, lighten the load, and start fresh in your new space.",
+        description: "Preparing for a home move can feel like a huge task, but our pre-packing service is designed to ease the process. We help you sort and pack only what you truly need or use. From decluttering areas and closets to organizing what goes with you, we'll help lighten the load and bring order to your move. As moving day approaches, you'll be decluttered, organized, and truly ready to pack.",
         beforeImage: "assets/moving-after.png",
         afterImage: "assets/moving-before.png"
     }

@@ -826,7 +826,7 @@ blockquote {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 2.5rem;
+    margin-bottom: .1rem;
     position: relative;
 }
 
@@ -925,9 +925,18 @@ blockquote {
     .system-content {
         padding: 2.2rem 1.5rem;
     }
+    .system-content h2,
+    .system-content > p,
+    .system-content blockquote {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
     .system-content h2 {
         font-size: 1.5rem;
-        text-align: center;
         width: 100%;
     }
     .system-steps {
@@ -947,8 +956,8 @@ blockquote {
     }
     .system-content blockquote {
         text-align: center;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
