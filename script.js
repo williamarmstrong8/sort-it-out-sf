@@ -394,4 +394,18 @@ if (messageTextarea) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
   });
-} 
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.querySelector('.contact-form form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      const submitBtn = contactForm.querySelector('.submit-btn');
+      // Wait a short moment to allow FormSubmit to process, then update button
+      setTimeout(() => {
+        submitBtn.textContent = 'Thank you for submitting';
+        submitBtn.disabled = true;
+      }, 100);
+    });
+  }
+}); 

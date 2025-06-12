@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Sort It Out</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-main {
+            min-height: 80vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 20rem;
+        }
+        .navbar {
+            background: #fff !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        .navbar .logo img {
+            height: 120px;
+            padding-top: 20px;
+        }
+        .nav-links a {
+            color: #1a1a1a !important;
+        }
+        .thank-you-section .cta-button {
+            background: var(--accent-color, #D4AF37);
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            padding: 1.1rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-top: 1rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .thank-you-section .cta-button:hover {
+            background: var(--accent-color-dark, #1e3a5f);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo"><img src="assets/logo-black.png" alt="Sort It Out Logo"></a>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/index.html#services">Services</a>
+                <a href="/index.html#about">About</a>
+                <a href="/index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main class="thank-you-main">
+        <section class="thank-you-section" style="background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-radius: 18px; max-width: 500px; width: 100%; padding: 3rem 2rem; text-align: center;">
+            <img src="assets/logo-black.png" alt="Sort It Out Logo" style="height: 80px; margin-bottom: 1.5rem;">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;">Thank You!</h1>
+            <p style="font-size: 1.2rem; color: #444; margin-bottom: 2.5rem;">Your message has been received.<br>We'll be in touch soon to help you get beautifully sorted.</p>
+            <a href="/" class="cta-button">Return Home</a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
