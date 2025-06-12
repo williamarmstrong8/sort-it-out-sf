@@ -129,9 +129,6 @@ function initSlider() {
     
     // Initialize before/after sliders
     initBeforeAfterSliders();
-    
-    // Start auto-advance
-    startSlideInterval();
 }
 
 // Before/After Slider functionality
@@ -202,9 +199,6 @@ function goToSlide(index) {
     
     slides[currentSlide].classList.add('active');
     indicators[currentSlide].classList.add('active');
-    
-    // Reset auto-advance
-    resetSlideInterval();
 }
 
 function nextSlide() {
@@ -217,33 +211,9 @@ function prevSlide() {
     goToSlide(prev);
 }
 
-// Auto-advance functionality
-function startSlideInterval() {
-    slideInterval = setInterval(nextSlide, 6000);
-}
-
-function resetSlideInterval() {
-    clearInterval(slideInterval);
-    startSlideInterval();
-}
-
-// Pause auto-advance on hover
-sliderContainer.addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
-});
-
-sliderContainer.addEventListener('mouseleave', () => {
-    startSlideInterval();
-});
-
-// Navigation buttons
-document.querySelector('.next-slide').addEventListener('click', () => {
-    nextSlide();
-});
-
-document.querySelector('.prev-slide').addEventListener('click', () => {
-    prevSlide();
-});
+// Add click event listeners for next/prev buttons
+document.querySelector('.next-slide').addEventListener('click', nextSlide);
+document.querySelector('.prev-slide').addEventListener('click', prevSlide);
 
 // Initialize slider
 initSlider();
